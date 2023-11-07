@@ -1,4 +1,5 @@
 # Swift News App Proposal
+By Trevor Henrich
 
 Must Have Features:
 - Read/Fetch Article
