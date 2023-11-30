@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6149E582B185EF500CEC2A5 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149E572B185EF500CEC2A5 /* Article.swift */; };
+		F6149E5A2B185FF500CEC2A5 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149E592B185FF500CEC2A5 /* ArticleView.swift */; };
 		F62BAF8E2B07437D00FC8162 /* NewsingtonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BAF8D2B07437D00FC8162 /* NewsingtonApp.swift */; };
 		F62BAF902B07437D00FC8162 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BAF8F2B07437D00FC8162 /* ContentView.swift */; };
 		F62BAF922B07437F00FC8162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62BAF912B07437F00FC8162 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6149E572B185EF500CEC2A5 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		F6149E592B185FF500CEC2A5 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		F62BAF8A2B07437D00FC8162 /* Newsington.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsington.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62BAF8D2B07437D00FC8162 /* NewsingtonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsingtonApp.swift; sourceTree = "<group>"; };
 		F62BAF8F2B07437D00FC8162 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				F62BAF9F2B0C660E00FC8162 /* Home.swift */,
+				F6149E592B185FF500CEC2A5 /* ArticleView.swift */,
 				F62BAFA32B0C664600FC8162 /* Local.swift */,
 				F62BAFA52B0C665900FC8162 /* Bookmark.swift */,
 				F62BAFA72B0C666B00FC8162 /* Settings.swift */,
@@ -94,6 +99,7 @@
 		F62BAFAD2B0D9F7200FC8162 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6149E572B185EF500CEC2A5 /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,8 +178,10 @@
 				F62BAFA82B0C666B00FC8162 /* Settings.swift in Sources */,
 				F62BAFA02B0C660E00FC8162 /* Home.swift in Sources */,
 				F62BAFA42B0C664600FC8162 /* Local.swift in Sources */,
+				F6149E582B185EF500CEC2A5 /* Article.swift in Sources */,
 				F62BAF902B07437D00FC8162 /* ContentView.swift in Sources */,
 				F62BAFA62B0C665900FC8162 /* Bookmark.swift in Sources */,
+				F6149E5A2B185FF500CEC2A5 /* ArticleView.swift in Sources */,
 				F62BAF8E2B07437D00FC8162 /* NewsingtonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
