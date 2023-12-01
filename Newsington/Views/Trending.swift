@@ -1,22 +1,36 @@
 //
-//  Home.swift
+//  Trending.swift
 //  Newsington
 //
-//  Created by Trevor Henrich on 11/20/23.
+//  Created by Trevor Henrich on 11/30/23.
 //
 
 import SwiftUI
 
-struct Home: View {
+struct Trending: View {
     @Environment(\.openURL) var openURL
     @State private var articleList: articleList?
-    
-    
+    @State private var query: String = "Arizona"
     var body: some View {
         
         NavigationStack {
                 Section {
-                    Text("Trending News").frame(maxWidth: .infinity, alignment: .leading).padding([.leading], 15).font(.system(size: 32))
+                    Text("Results for '\(query)'").frame(maxWidth: .infinity, alignment: .leading).padding([.leading], 15).font(.system(size: 24))
+                    HStack{
+                        TextField(" ", text: $query){}
+                        Image(systemName: "magnifyingglass").padding().onTapGesture {
+                            Task{
+                                do{
+                                    articleList = try await getArticle(query: query)
+                                } catch {
+                                    print("oopsies!")
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                                    
                     
                     ScrollView{
                         VStack(alignment: .center){
@@ -33,7 +47,9 @@ struct Home: View {
                                 let sourceName = (article?.source.name ?? "")
                                 let urlToImage = URL(string: article?.urlToImage ?? "")
                                 let author = (article?.author ?? "")
+                              
                                 
+                              
                                 AsyncImage(url: urlToImage){image in
                                     image.resizable()
                                 } placeholder: {
@@ -52,7 +68,7 @@ struct Home: View {
                             }
                         }.task{
                             do{
-                                articleList = try await getTrending()
+                                articleList = try await getArticle(query: query)
                             } catch {
                                 print("oopsies!")
                             }
@@ -72,12 +88,10 @@ struct Home: View {
         
 
         }
-    }
+}
 
-
-struct Home_Previews: PreviewProvider {
+struct Trending_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
-            
+        Trending()
     }
 }

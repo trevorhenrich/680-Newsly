@@ -12,28 +12,33 @@ struct ArticleView: View {
     @State private var articleList: articleList?
     
     var body: some View {
-            VStack{
-                let articles = articleList?.articles
-                let url = URL(string: articles?[1].urlToImage ?? "")
-                
-                AsyncImage(url: url){image in
-                    image.resizable()
-                         } placeholder: {
-                             ProgressView()
-                         }.frame(minHeight: 200, maxHeight: 300)
-                
-                    Text((articles?[1].title ?? ".")).lineLimit(3)
-
-                
-            }.task{
-                await refresh()
+        
+        NavigationStack {
+            
+                VStack{
+                    let articles = articleList?.articles
+                    let url = URL(string: articles?[1].urlToImage ?? "")
+                    
+                    AsyncImage(url: url){image in
+                        image.resizable()
+                             } placeholder: {
+                                 ProgressView()
+                             }.frame(minHeight: 200, maxHeight: 300)
+                    
+                        Text((articles?[1].title ?? ".")).lineLimit(3)
+                }.task{
+                    await refresh()
+            
+            }
+                .navigationTitle("Home")
         }
+           
         
     }
 
     func refresh() async -> Void {
         do{
-            articleList = try await getArticle()
+            articleList = try await getArticle(query: "California")
         } catch {
             print("oopsies!")
         }

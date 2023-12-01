@@ -6,7 +6,7 @@ struct ContentView: View {
             // Tab Navigation
             TabView{
                 Home().tabItem {Image(systemName: "house")}
-                Local().tabItem {Image(systemName: "location")}
+                Trending().tabItem {Image(systemName: "magnifyingglass")}
                 Bookmark().tabItem {Image(systemName: "bookmark")}
                 Settings().tabItem {Image(systemName: "person")}
             }
@@ -17,6 +17,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .navigationBarHidden(true)
     }
 }
 
