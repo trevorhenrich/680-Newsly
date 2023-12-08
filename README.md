@@ -6,9 +6,7 @@ Must Have Features:
 - Search
 - Sort Articles by Tag/Category
 - Saved Articles
-- History
-- Geolocalized News
 
 Nice to Have Features:
-- Trending Articles
+- Login
 - Follow Publication
