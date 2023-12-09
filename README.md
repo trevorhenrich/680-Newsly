@@ -8,5 +8,5 @@ Must Have Features:
 - Saved Articles
 
 Nice to Have Features:
-- Login
+- Cached Search History
 - Follow Publication
