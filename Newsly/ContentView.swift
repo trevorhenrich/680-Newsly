@@ -12,10 +12,22 @@ struct ContentView: View {
         VStack {
             // Tab Navigation
             TabView{
-                Home().tabItem {Image(systemName: "house")}
-                Search().tabItem {Image(systemName: "magnifyingglass")}
-                Categories().tabItem{Image(systemName: "slider.horizontal.3")}
-                Bookmarks().tabItem {Image(systemName: "bookmark")}
+                Home().tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                Search().tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
+                Categories().tabItem{
+                    Image(systemName: "slider.horizontal.3")
+                    Text("Categories")
+                }
+                Bookmarks().tabItem {
+                    Image(systemName: "bookmark")
+                    Text("Bookmarks")
+                }
             }
         }
     }

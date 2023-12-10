@@ -2,7 +2,7 @@
 //  Bookmarks.swift
 //  Newsly
 //
-//  Created by Trevor Henrich on 12/6/23.
+//  Created by Trevor Henrich on 11/20/23.
 //
 
 import SwiftUI
@@ -16,10 +16,14 @@ struct Bookmarks: View {
         VStack {
             Text("Bookmarks").frame(maxWidth: .infinity, alignment: .leading).padding([.leading], 15).font(.system(size: 32))
             
+            if (articles.count == 0 ){
+                Text("Bookmarks are empty ):").padding([.top], 250)
+            }
             
             List(articles) {article in
                 let articleURL = URL(string: article.url ?? "")!
                 let urlToImage = URL(string: article.urlToImage ?? "")
+                
                 HStack{
                     AsyncImage(url: urlToImage){image in
                         image.resizable()
@@ -28,7 +32,7 @@ struct Bookmarks: View {
                     }.onTapGesture {
                         openURL(articleURL)
                     }.frame(minHeight: 100, maxHeight: 100)
-                    Text(article.title ?? "error").onTapGesture {
+                    Text(article.title ?? "Title Placeholder").onTapGesture {
                         openURL(articleURL)
                     }
                     Image(systemName: "bookmark").onTapGesture {

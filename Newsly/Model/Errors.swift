@@ -2,7 +2,7 @@
 //  Errors.swift
 //  Newsly
 //
-//  Created by Trevor Henrich on 12/7/23.
+//  Created by Trevor Henrich on 11/20/23.
 //
 
 import Foundation

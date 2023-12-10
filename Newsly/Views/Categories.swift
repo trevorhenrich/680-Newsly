@@ -2,7 +2,7 @@
 //  Categories.swift
 //  Newsly
 //
-//  Created by Trevor Henrich on 12/9/23.
+//  Created by Trevor Henrich on 11/20/23.
 //
 
 import SwiftUI
@@ -19,7 +19,6 @@ struct Categories: View {
         NavigationStack {
                 Section {
                     Text(category.rawValue + " News").frame(maxWidth: .infinity, alignment: .leading).padding([.leading], 15).font(.system(size: 32))
-            
 
 
                     ScrollView{
@@ -30,7 +29,6 @@ struct Categories: View {
                                         Text(categories.rawValue).onTapGesture{
                                             category = categories
                                             refreshCategory()
-                                            print("Debug: " + category.rawValue)
                                         }
                                     
                                     }
@@ -38,14 +36,14 @@ struct Categories: View {
                             }
 
           
-                                ForEach(0..<5, id: \.self) {index in
+                                ForEach(0..<10, id: \.self) {index in
                                     let article = articleList?.articles[index]
                                     if let urlString = article?.url{
                                         if let articleURL: URL = URL(string: urlString) {
                                             let title = (article?.title ?? "Title Placeholder")
                                             let sourceName = (article?.source.name ?? "no source")
                                             let urlToImage = URL(string: article?.urlToImage ?? "")
-                                            let author = (article?.author ?? "no author")
+                                            let author = (article?.author ?? "Author Placeholder")
                                             
                                             AsyncImage(url: urlToImage){image in
                                                 image.resizable()
@@ -68,7 +66,7 @@ struct Categories: View {
                                                     let newArticle = ArticleEntity(context: moc)
                                                     newArticle.title = title
                                                     newArticle.urlToImage = article?.urlToImage ?? ""
-                                                    newArticle.url = article?.url ?? "www.google.com"
+                                                    newArticle.url = urlString
                                                     try? moc.save()
                                                 }
                                             }

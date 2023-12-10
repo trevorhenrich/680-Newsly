@@ -13,11 +13,9 @@
 		F6B5D31C2B2173AD006A560F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B5D31B2B2173AD006A560F /* Assets.xcassets */; };
 		F6B5D3202B2173AD006A560F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B5D31F2B2173AD006A560F /* Preview Assets.xcassets */; };
 		F6B5D3332B21751A006A560F /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D3322B21751A006A560F /* Bookmarks.swift */; };
-		F6B5D3352B217525006A560F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D3342B217525006A560F /* Settings.swift */; };
 		F6B5D3372B217544006A560F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D3362B217544006A560F /* Article.swift */; };
 		F6B5D3392B2175C6006A560F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D3382B2175C6006A560F /* DataController.swift */; };
 		F6B5D33C2B217600006A560F /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D33A2B217600006A560F /* User.xcdatamodeld */; };
-		F6B5D33E2B2176B1006A560F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D33D2B2176B1006A560F /* TestView.swift */; };
 		F6B5D3422B2176F8006A560F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D3412B2176F8006A560F /* Home.swift */; };
 		F6B5D3482B217B55006A560F /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B5D3472B217B55006A560F /* Search.swift */; };
 		F6C178D42B246EBC00DB9DE9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C178D32B246EBC00DB9DE9 /* Categories.swift */; };
@@ -32,11 +30,9 @@
 		F6B5D31D2B2173AD006A560F /* Newsly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Newsly.entitlements; sourceTree = "<group>"; };
 		F6B5D31F2B2173AD006A560F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F6B5D3322B21751A006A560F /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
-		F6B5D3342B217525006A560F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F6B5D3362B217544006A560F /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		F6B5D3382B2175C6006A560F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		F6B5D33B2B217600006A560F /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
-		F6B5D33D2B2176B1006A560F /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		F6B5D3412B2176F8006A560F /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F6B5D3472B217B55006A560F /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		F6C178D32B246EBC00DB9DE9 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -96,12 +92,10 @@
 		F6B5D3282B217456006A560F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F6B5D33D2B2176B1006A560F /* TestView.swift */,
 				F6B5D3412B2176F8006A560F /* Home.swift */,
 				F6C178D32B246EBC00DB9DE9 /* Categories.swift */,
 				F6B5D3472B217B55006A560F /* Search.swift */,
 				F6B5D3322B21751A006A560F /* Bookmarks.swift */,
-				F6B5D3342B217525006A560F /* Settings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,14 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B5D3372B217544006A560F /* Article.swift in Sources */,
-				F6B5D3352B217525006A560F /* Settings.swift in Sources */,
 				F6B5D3482B217B55006A560F /* Search.swift in Sources */,
 				F6B5D31A2B2173AC006A560F /* ContentView.swift in Sources */,
 				F6436DC62B22950D003BE983 /* Errors.swift in Sources */,
 				F6C178D42B246EBC00DB9DE9 /* Categories.swift in Sources */,
 				F6B5D3332B21751A006A560F /* Bookmarks.swift in Sources */,
 				F6B5D3392B2175C6006A560F /* DataController.swift in Sources */,
-				F6B5D33E2B2176B1006A560F /* TestView.swift in Sources */,
 				F6B5D33C2B217600006A560F /* User.xcdatamodeld in Sources */,
 				F6B5D3422B2176F8006A560F /* Home.swift in Sources */,
 				F6B5D3182B2173AC006A560F /* NewslyApp.swift in Sources */,

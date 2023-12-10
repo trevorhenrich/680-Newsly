@@ -2,7 +2,7 @@
 //  Article.swift
 //  Newsington
 //
-//  Created by Trevor Henrich on 11/29/23.
+//  Created by Trevor Henrich on 11/20/23.
 //
 
 import Foundation

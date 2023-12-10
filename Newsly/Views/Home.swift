@@ -26,11 +26,10 @@ struct Home: View {
                                     let article = articleList?.articles[index]
                                     if let urlString = article?.url{
                                         if let articleURL: URL = URL(string: urlString) {
-                                            //guard let url = URL(string: endpoint) else {throw articleError.invalidURL}
                                             let title = (article?.title ?? "Title Placeholder")
                                             let sourceName = (article?.source.name ?? "no source")
                                             let urlToImage = URL(string: article?.urlToImage ?? "")
-                                            let author = (article?.author ?? "no author")
+                                            let author = (article?.author ?? "Author Placeholder")
                                             
                                             AsyncImage(url: urlToImage){image in
                                                 image.resizable()
@@ -38,8 +37,8 @@ struct Home: View {
                                                 ProgressView()
                                             }.onTapGesture {
                                                 openURL(articleURL)
-                                            }.frame(minHeight: 200, maxHeight: 300)
-                                            Text(title).lineLimit(2).font(.headline).onTapGesture {
+                                            }.frame(minHeight: 200, maxHeight: 250)
+                                            Text(title).lineLimit(2).font(.headline).padding().onTapGesture {
                                                 openURL(articleURL)
                                             }
                                             
@@ -53,7 +52,7 @@ struct Home: View {
                                                     let newArticle = ArticleEntity(context: moc)
                                                     newArticle.title = title
                                                     newArticle.urlToImage = article?.urlToImage ?? ""
-                                                    newArticle.url = article?.url ?? "www.google.com"
+                                                    newArticle.url = urlString
                                                     try? moc.save()
                                                 }
                                             }
@@ -74,9 +73,6 @@ struct Home: View {
             
                 
         }
-        
-        
-
         }
 
     
@@ -87,7 +83,7 @@ struct Home: View {
         do{
             articleList = try await getTrending()
         } catch {
-            print("oopsies!")
+            print("Try Await in Home View Refresh Article func")
         }
     }
     
